@@ -1,14 +1,29 @@
-import './assets/main.css'
+import { registerPlugins } from '@/plugins/index';
+import './styles/main.scss';
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+// Components
+import App from './App.vue';
+// import { BaseButton, BaseDatePicker, BaseHeader, BaseTextBox, BaseTabs, BaseIsland, BaseFilePicker, UnavailableContent } from '@/components/global';
 
-import App from './App.vue'
-import router from './router'
+// Composables
+import { createApp } from 'vue';
+import { useAppStore } from './stores';
+// import validateFieldDirective from './directives/validateFieldDirective';
+// import isModifiedDirective from './directives/isModifiedDirective';
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(createPinia())
-app.use(router)
+registerPlugins(app);
+// app.component("BaseButton", BaseButton);
+// app.component("BaseDatePicker", BaseDatePicker);
+// app.component("BaseTextBox", BaseTextBox);
+// app.component("BaseHeader", BaseHeader);
+// app.component("BaseTabs", BaseTabs);
+// app.component("BaseIsland", BaseIsland);
+// app.component("BaseFilePicker", () => import('@/components/global/BaseFilePicker.vue'));
+// app.component("UnavailableContent", UnavailableContent);
 
-app.mount('#app')
+
+
+const AppComponent = app.mount('#app');
+const appStore = useAppStore();
