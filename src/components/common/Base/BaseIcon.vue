@@ -1,8 +1,8 @@
 <template>
 	<div class="base-icon">
 		<svg xmlns="http://www.w3.org/2000/svg"
-			:width="width"
-			:height="height"
+			:width="size ?? width"
+			:height="size ?? height"
 			:viewBox="viewBox"
 			:fill="fill"
 			:stroke="stroke"
