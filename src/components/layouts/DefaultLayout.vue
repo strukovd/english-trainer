@@ -1,8 +1,9 @@
 <template>
-	<header></header>
-	<main>
-		<router-view/>
-	</main>
+	<section class="default-layout">
+		<main>
+			<router-view/>
+		</main>
+	</section>
 </template>
 
 <script lang="ts">
@@ -12,3 +13,9 @@ export default defineComponent({
 	name: 'DefaultLayout',
 });
 </script>
+
+<style lang="scss">
+.default-layout {
+	margin:0 2em;
+}
+</style>

@@ -13,7 +13,7 @@
 			<div class="input-container">
 				<span class="selected-items" v-if="multiple && selectedItems.length">
 					<span class="item-badge" v-for="selectedItem of selectedItems" :key="selectedItem[fieldKey]">
-						<!-- <v-icon v-if="selectedItem.icon" :icon="selectedItem.icon" size="1.2em" style="margin-right:.1em; opacity:.8;"></v-icon> -->
+						<BaseIcon v-if="selectedItem.icon" :name="selectedItem.icon" size="1.2em" style="margin-right:.1em; opacity:.8;"/>
 						<span>{{ selectedItem[fieldValue] }}</span>
 					</span>
 				</span>
@@ -284,11 +284,13 @@ export default defineComponent({
 	position:relative;
 
 	label {
-		.caption {
-			font-size:14px;
-			opacity:.6;
-			line-height: 1.4em;
-			margin-bottom: .4em;
+		.header {
+			.caption-container .caption {
+				font-size:14px;
+				opacity:.6;
+				line-height: 1.4em;
+				margin-bottom: .4em;
+			}
 		}
 		.input-container {
 			margin:0 0 .6em 0;
@@ -346,10 +348,10 @@ export default defineComponent({
 				outline: none;
 				font-size: 16px;
 				box-sizing: border-box;
+				background-color: transparent;
 				// padding:.5em .7em;
 				padding: 0.4em .4em;
 
-				background-color: transparent;
 				border-style: none;
 
 				&.selected {
@@ -407,9 +409,6 @@ export default defineComponent({
 			border-color: red;
 			border-style: dashed;
 			color: red;
-
-			// outline:1px dashed red;
-			// color: red;
 		}
 	}
 }

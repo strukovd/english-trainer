@@ -47,6 +47,17 @@ const routes: Array<RouteRecordRaw> = [
 		}
 	},
 
+	{
+		path: "/plan",
+		name: "PlanPage",
+		component: () => import("../components/pages/PlanPage.vue"),
+		meta: {
+			public: false,
+			title: `План`,
+			layout: "DefaultLayout",
+		}
+	},
+
 	// {
 	// 	path: "/:pathMatch(.*)*",
 	// 	name: "NotFoundPage",

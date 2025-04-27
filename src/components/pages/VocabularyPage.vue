@@ -6,8 +6,6 @@
 
 		<h1 style="color:#0a2145;">Пользовательский словарь</h1>
 		<BaseAutocomplite :items="words" :autoselect="true" :multiple="true" @change="onSearch" @update:modelValue="onSearch" placeholder="Поиск" />
-		<input class="search" placeholder="Поиск" type="text"/>
-		<LearningProgress name="progress" v-for="word of words" :key="word.name" />
 
 		<section class="tags">
 			<div class="tag" v-for="(tag, index) of tags" :key="tag.key" :class="{ 'selected': index === 4 }">
@@ -22,6 +20,8 @@
 				<span class="name">{{ tag.name }}</span>
 			</div>
 		</section> -->
+
+
 
 		<section class="words-list">
 			<div class="word" v-for="word of words" :key="word.name" style="display:flex;">

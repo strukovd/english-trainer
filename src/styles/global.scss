@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+body {
+	font-family: "Inter", sans-serif;
+	font-weight: 300;
+	// background-color: #f6f7fb;
+	// color: #2c3e50;
+
+	// background-color: #f5f8ff;
+	// background-color: #f8f9ff;
+	background-color: #ffffff;
+	color: #071b3e;
+	margin:0;
+}
+
+h1 {
+	color: $textColor;
+	font-weight: 700;
+	font-size: 32px;
+	font-family: "Roboto", sans-serif;
+	line-height: 2.5rem;
+	margin-bottom: 1rem;
+}
